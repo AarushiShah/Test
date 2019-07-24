@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <!-- Custom styles for this template -->
+  <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1><%= title %></h1>
+  </div>
+
+  <div class="box">
+
+    <% list.forEach(function(listItem) { %>
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= listItem %></p>
+      </div>
+    <% }); %>
+
+    <form action="/" method="post" class="item">
+      <input type="text" name="addItem"></input>
+      <button type="submit" name="typeList" value=<%= title %>>+</button>
+    </form>
+
+  </div>
+</body>
+
+</html>
